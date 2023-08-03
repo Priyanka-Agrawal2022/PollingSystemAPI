@@ -24,7 +24,6 @@ module.exports.view = async (req, res) => {
 module.exports.create = async (req, res) => {
   try {
     const question = await Question.create(req.body);
-    console.log(question);
     return res.send(question);
   } catch (err) {
     console.log("Error:", err);

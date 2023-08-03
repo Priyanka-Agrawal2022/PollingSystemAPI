@@ -7,8 +7,6 @@ module.exports.create = async (req, res) => {
 
   // create options for that question
   try {
-    console.log(req.body);
-    console.log(questId);
     const option = await Option.create({
       text: req.body.text,
       question: questId,
