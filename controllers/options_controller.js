@@ -14,7 +14,7 @@ module.exports.create = async (req, res) => {
 
     // add link_to_vote to the option created above dynamically
     const updatedOption = await Option.findByIdAndUpdate(option._id, {
-      link_to_vote: `http://localhost:8000/api/v1/options/${option._id}/add_vote`,
+      link_to_vote: `https://polling-system-api-184l.onrender.com/api/v1/options/${option._id}/add_vote`,
     });
 
     updatedOption.save();
